@@ -1,9 +1,5 @@
 # Двухсервисная система LLM-консультаций
 
-[![CI](https://github.com/magom001/mephi-python-session-project-2026/actions/workflows/ci.yml/badge.svg)](https://github.com/magom001/mephi-python-session-project-2026/actions/workflows/ci.yml)
-![Auth Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/magom001/7a42d1d12acd9f1197adde53bfc6120f/raw/auth_coverage.json)
-![Bot Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/magom001/7a42d1d12acd9f1197adde53bfc6120f/raw/bot_coverage.json)
-
 ## Архитектура
 
 Система построена по принципу разделения ответственности и состоит из двух логически и технически независимых сервисов, связанных только через JWT-токены. Auth Service отвечает исключительно за управление пользователями и выпуск токенов. Bot Service предоставляет функциональность LLM-консультаций через Telegram-бота и не знает ничего о пользователях, паролях и механизмах регистрации — он доверяет только корректно подписанному и не истёкшему JWT.
